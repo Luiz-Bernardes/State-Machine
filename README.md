@@ -1,25 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+* Rails version
+	
+	5.2.1
 
 * Ruby version
 
-* System dependencies
+	2.5.0
 
-* Configuration
+* Description
+	
+	Basic Test Application
 
-* Database creation
+* Patterns
 
-* Database initialization
+	State Machine
 
-* How to run the test suite
+* Resources
+	
+	Documents
 
-* Services (job queues, cache servers, search engines, etc.)
+* Additional Gems
 
-* Deployment instructions
+	Aasm
 
-* ...
-# State-Machine
+# State Machine
