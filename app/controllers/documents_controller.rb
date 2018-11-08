@@ -1,5 +1,22 @@
 class DocumentsController < ApplicationController
-  before_action :set_document, only: [:show, :edit, :update, :destroy]
+  before_action :set_document, only: [:change, :show, :edit, :update, :destroy]
+
+  
+  def change
+    @document.state # return the current state
+    # => "unverified"
+    @document.verified?
+    # => false
+    @document.may_verify?
+    # => true
+    @document.may_publish?
+    # => false
+    @document.verify # Changes the state to 'verified' but doesn't save it.
+    # => true
+    @document.verify! # => raises AASM::InvalidTransition
+    @document.publish! # Changes the state to 'published' and saves it.
+    # => true
+  end
 
   # GET /documents
   # GET /documents.json
